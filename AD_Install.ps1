@@ -179,7 +179,7 @@ $DomainNameDNS="tesla.local"
 $DomainNameNetbios="TESLA"
 
 $ForestConfiguration=@{
-'-DatabasePath='C:\Windows\NTDS';
+'-DatabasePath'='C:\Windows\NTDS';
 '-DomainMode'='Default';
 '-DomainName'=$DomainNameDNS;
 '-DomainNetbiosName'=$DomainNameNetbios;
@@ -189,8 +189,7 @@ $ForestConfiguration=@{
 '-NoRebootOnCompletion'=$false;
 '-SysvolPath'='C:\Windows\SYSVOL';
 '-Force'=$true;
-'-CreateDnsDelegation'=$false
-}
+'-CreateDnsDelegation'=$false }
 
 Import-Module ADDSDeployment
 Install-ADDSForest @ForestConfiguration
